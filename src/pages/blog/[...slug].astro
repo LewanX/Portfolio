@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+export async function getStaticPaths() {
+  const pages = [
+    {
+      slug: undefined,
+      title: "Astro Store",
+      text: "Welcome to the Astro store!",
+    },
+    {
+      slug: "products",
+      title: "Astro products",
+      text: "We have lots of products for you",
+    },
+    {
+      slug: "products/astro-handbook",
+      title: "The ultimate Astro handbook",
+      text: "If you want to learn Astro, you must read this book.",
+    },
+  ];
+  return pages.map(({ slug, title, text }) => {
+    return {
+      params: { slug },
+      props: { title, text },
+    };
+  });
+}
+
+const { title, text } = Astro.props;
+---
+
+<Layout title={title}>
+    <a href="/blog"><button class="btn btn-primary"> -Back- </button></a>
+        
+          <title>{title}</title>
+          <h1>{title}</h1>
+          <p>{text}</p>
+     
+     
+</Layout>
