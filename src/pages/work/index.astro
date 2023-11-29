@@ -1,15 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import Item from '../../components/WorkItem.astro';
 ---
-<Layout title='Work'>
-    <div class=" rounded-md overflow-hidden bg-base-200 shadow-xl w-3/4 m-auto grid grid-cols-2 font-mono ">
-        <figure class=""><img src="https://png.pngtree.com/png-vector/20190727/ourlarge/pngtree-business-to-be-completed-png-image_1634610.jpg" alt="Album"/></figure>    
-   <div>
-    <p class="text-center mt-3 font-bold">To-do List</p>
-   </div>
-        
+<Layout title='Work' >
+    <div data-theme="light" class="w-2/3 m-auto bg-slate-300 rounded-xl p-1 shadow-lg">
+        <p  class=" font-bold font-mono  text-center   ">Working in this section...</p>
     </div>
-   
 
-  
+    
+    <section class="flex flex-wrap gap-3 mt-3">
+        <Item/>
+        <Item/>
+        <Item/>
+        <Item/>
+        
+    </section>
+   
 </Layout>
